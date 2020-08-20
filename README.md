@@ -1,1 +1,1 @@
-# source code membuat virtual private cloud dengan GCP
+# source code create virtual private cloud GCP with terraform
