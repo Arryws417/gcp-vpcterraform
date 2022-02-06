@@ -19,7 +19,7 @@ resource "google_compute_instance" "vm-instance" {
   network_interfaces {
     subnetwork    = "${var.instance_subnetwork}"
     access_config {
-      # allocate one-to-one NAT ip to the instance
+      # alokasi NAT ip ke masing - masing instance
     }
   }
  }
