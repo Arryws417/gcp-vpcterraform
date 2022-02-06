@@ -1,11 +1,11 @@
-# create network
+# bikin nama vpc nya di gcp
 
 resource "google_compute_network" "mynetwork" {
   name                    = "mynetwork"
   auto_create_subnetworks  = true
 }
 
-# create firewall-rule
+# bikin firewall-rule
 
 resource "google_compute_firewall" mynetwork-allow-http-ssh-icmp-rdp" {
   name    = "mynetwork-allow-http-ssh-icmp-rdp"
@@ -19,7 +19,8 @@ resource "google_compute_firewall" mynetwork-allow-http-ssh-icmp-rdp" {
     }
 }
 
-# create Virtual Machine in region US or other region
+# bikin Virtual Machine di region US atau region lain
+# kemudian dihubungkan dengan network yang sudah kita buat tadi pakai definisi .mynetwork.self_link
 
 module  "mynet-us-vm" {
   
